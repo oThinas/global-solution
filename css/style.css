@@ -1,0 +1,209 @@
+/* Resets */
+
+:root {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #408080;
+  margin: 1rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:visited {
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  height: 4rem;
+  background: #2c5757;
+}
+
+.sr-only {
+  /* Tira um elemento html da tela sem removê-lo. Bom pra acessibilidade */
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Header */
+
+header {
+  background-image: url("../img/header_bg.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 5rem;
+}
+
+header img {
+  width: 20rem;
+  height: auto;
+}
+
+.header-text {
+  position: absolute;
+  left: 40%;
+  font-size: 1.4rem;
+}
+
+.header-text h1 {
+  margin-bottom: 4rem;
+  font-size: 4rem;
+}
+
+/* Nav */
+nav {
+  background: #254a4a;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding: 1.5rem;
+}
+
+nav ul li:hover,
+nav > a:hover {
+  background: #142727;
+  cursor: pointer;
+}
+
+nav > a {
+  padding: 1.5rem;
+}
+
+/* Main */
+main {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  column-gap: 1.6rem;
+  padding: 1rem 0;
+}
+
+/* Category */
+.category {
+  background: #fff;
+  width: fit-content;
+  padding: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.category h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.category-image {
+  margin: 2rem auto;
+  width: fit-content;
+}
+
+.category img {
+  width: 60rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Aside */
+.aside-block {
+  background: #fff;
+  padding: 1.7rem;
+}
+
+.aside-block:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.aside-image {
+  margin: 2rem auto;
+  width: fit-content;
+}
+
+.aside-block img {
+  width: 42rem;
+  height: auto;
+}
+
+.aside-block p {
+  margin-bottom: 0;
+}
+
+/* Form */
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-block input {
+  border: 1px solid black;
+  padding: 0.8rem 0.3rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.4rem;
+}
+
+.aside-block button {
+  border: 1px solid #000;
+  border-radius: 0.8rem;
+  color: #fff;
+  background: #0377fc;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.aside-block button:hover {
+  background: #015fca;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  height: 8rem;
+  font-size: 1.8rem;
+  display: flex;
+}
+
+footer address {
+  margin: auto;
+}
+
+/* Colocamos 1120px no lugar de 920px porque em 1120px o layout já começa a quebrar */
+@media (max-width: 1120px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category {
+    width: auto;
+  }
+}
